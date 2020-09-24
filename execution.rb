@@ -10,8 +10,8 @@ class Execution
   end
 
   def find_movie(title)
-    mod_request = request_url.gsub("query_string", "?t=" + title)
-    @raw_response = RestClient::Request.execute(method: :get, url: mod_request,  timeout: 10, headers: header)
+    @request_url= request_url.gsub("query_string", "?t=" + title)
+    @raw_response = RestClient::Request.execute(method: :get, url: request_url,  timeout: 10, headers: header)
     @response = JSON.parse(@raw_response)
   end
 
