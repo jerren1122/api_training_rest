@@ -19,6 +19,7 @@ end
 
 execution = Execution.new
 execution.find_movie("twister")
+puts execution.request_url
 puts execution.response["Year"]
 puts execution.raw_response.code
 puts execution.raw_response.headers
