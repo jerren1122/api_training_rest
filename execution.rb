@@ -1,6 +1,7 @@
+require 'rest-client'
+require 'json'
+
 class Execution
-  require 'rest-client'
-  require 'json'
   attr_accessor(:request_url, :response, :header, :raw_response)
   def initialize
     api_key = "2a1b7137"
